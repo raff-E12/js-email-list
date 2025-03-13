@@ -1,0 +1,22 @@
+/***** Inizio Stile di pagina*****/
+
+#body{
+    background-color: #9ABBD9;
+}
+
+.header-sc{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.header-sc h1{
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    font-weight: 800;
+    text-shadow: 8px 2px 1px #5D8C8C;
+}
+
+/***** Fine stile di pagina generale *****/
