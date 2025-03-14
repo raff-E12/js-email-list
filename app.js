@@ -8,16 +8,15 @@ let parent_node = document.getElementById("parent-node");
 //Creazione della seguente funzione di integrazione Api
 
 function HandleEmailGenBox(){
-    setTimeout(()=>{
-     let response = fetch(url).then(response => response.json()).then(data => HandleBoxEmailGen(data));
-     return response
-    }, 1200)
+     for (let index = 0; index < 10; index++) {
+      let response = fetch(url).then(response => response.json()).then(data => HandleBoxEmailGen(data));
+      return response
+     }
 }
 
 //Generazione degli elementi nel DOM
 const HandleBoxEmailGen = (data)=>{
     setTimeout(()=>{
-       for (let index = 1; index < 10; index++) {
         let create_box = document.createElement("div");
         let fragment_parent = document.createDocumentFragment();
         let text_title = document.createElement("h2");
@@ -32,10 +31,11 @@ const HandleBoxEmailGen = (data)=>{
         create_box.append(text_email);
         fragment_parent.append(create_box);
         parent_node.append(fragment_parent);
-       }
     }, 1200)
 }
 
 window.addEventListener('load', ()=>{
-    HandleEmailGenBox();
+    for (let index = 0; index < 10; index++) {
+        HandleEmailGenBox();
+    }
 })
